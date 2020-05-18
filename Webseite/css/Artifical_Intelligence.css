@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.one{
+    background: #555555;
+    scroll-snap-align: center;
+    margin-top: 30px;
+}
+
+.two{
+    background: #00eeff;
+    scroll-snap-align: center;
+    margin-top: 30px;
+}
+
+.three{
+    background: #777777;
+    scroll-snap-align: center;
+    margin-top: 30px;
+}
+
+.four{
+    background: #0066ff;
+    scroll-snap-align: center;
+    margin-top: 30px;
+}
+
+.outher-wrapper{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+header{
+    background: white;
+    height: 10%;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.title{
+    margin: 0;
+    font-weight: 100;
+    padding-top: 1%;
+    font-size: 300%;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    margin-bottom: 30px;
+    top:80%;
+} 
+
+.nav{
+    display: flex;
+    list-style: none;
+    counter-reset: step;
+    counter-increment: step 2014;
+}
+
+.nav li{
+    list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.nav li:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    line-height: 50px;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    letter-spacing: 0px;
+  }
+
+  .nav li:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: black;
+    top: 15px;
+    left: -40%;
+    z-index: -1;
+  }
+
+  .nav li:first-child:after {
+    content: none;
+  }
+
+.nav a{
+    margin: 50px;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 120%;
+    color: black;
+}
+
+.nav a:hover{
+    color: deepskyblue;
+}
